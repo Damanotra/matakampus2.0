@@ -8,7 +8,6 @@ class BerandaTab extends StatefulWidget {
   _BerandaTabState createState() => _BerandaTabState();
 }
 
-
 class _BerandaTabState extends State<BerandaTab> {
   final _hometabBloc = HometabBloc();
 
@@ -21,22 +20,21 @@ class _BerandaTabState extends State<BerandaTab> {
         appBar: CustomAppBar(
           height: 64,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 16),
-            child: Row(children: <Widget>[
-              Image.asset('assets/image/logo-trans.png'),
-              SizedBox(width: 16),
-              Expanded(
-                child: Container(
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.grey
-                    ),
-                    borderRadius: BorderRadius.circular(32)
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            child: Row(
+              children: <Widget>[
+                Image.asset('assets/image/logo-trans.png'),
+                SizedBox(width: 16),
+                Expanded(
+                  child: Container(
+                    height: double.infinity,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(32)),
                   ),
-                ),
-              )
-            ],),
+                )
+              ],
+            ),
           ),
         ),
         body: SafeArea(
@@ -44,12 +42,11 @@ class _BerandaTabState extends State<BerandaTab> {
             bloc: _hometabBloc,
             builder: (context, state) {
               return Container(
+                color: Colors.grey[200],
                 child: ListView(
-                  shrinkWrap: false,
                   children: <Widget>[
-                    //_buildTemuanToday(),
-                    //_buildTemuanNew(),
-                    //_buildTemuanOld()
+                    SizedBox(height: 8),
+                    _buildTemuanToday()
                   ],
                 ),
               );
@@ -60,25 +57,53 @@ class _BerandaTabState extends State<BerandaTab> {
     );
   }
 
-
-
   Widget _buildTemuanToday() {
     Widget content;
     content = _temuanListToday();
 
-    return Padding(
-      padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
-      child: Container(
-        height: 192,
-        child: Column(
-          children: <Widget>[
-            Row(children: <Widget>[
-              Expanded(child: Text('Hari ini')),
-              GestureDetector(child: Text('Lihat Semua'))
-            ]),
-            content,
-          ],
-        ),
+    return Container(
+      height: 192,
+      color: Colors.orange,
+      child: Column(
+        children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 16, left: 24, right: 24, bottom: 0),
+              child: Row(children: <Widget>[
+                Expanded(child: Text('Hari ini',style: TextStyle(color: Colors.white))),
+                GestureDetector(child: Text('LIHAT SEMUA',style: TextStyle(color: Colors.white)))
+              ]),
+            ),
+          //_dummyToday()
+        ],
+      ),
+    );
+  }
+
+  Widget _dummyToday(){
+    Barang item = Barang('Botol Tupperware Warna Biru', '2701');
+    return Container(
+      height: 128,
+      width: 128,
+      child: Column(
+        children: <Widget>[
+          Container(
+              height: 72,
+              child: Image.asset('assets/image/tupperware.png')),
+          Container(
+            color: Colors.white,
+            child: Column(
+              children: <Widget>[
+                Text(item.nama),
+                Row(
+                  children: <Widget>[
+                    Icon(Icons.location_on, color: Colors.white),
+                    Text(item.location)
+                  ],
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
@@ -88,7 +113,7 @@ class _BerandaTabState extends State<BerandaTab> {
     temuanListToday = [
       Barang('Botol Tupperware Warna Biru', '2701'),
       Barang('Mouse Logitech Biru', '2403'),
-      Barang('Buku tulis', 'Selasar Gor')
+      //Barang('Buku tulis', 'Selasar Gor')
     ];
     return ListView.builder(
       scrollDirection: Axis.horizontal,
@@ -102,7 +127,7 @@ class _BerandaTabState extends State<BerandaTab> {
             children: <Widget>[
               Container(
                   height: 72,
-                  child: Image.asset('assets/image/logo-trans.png')),
+                  child: Image.asset('assets/image/tupperware.png')),
               Container(
                 child: Column(
                   children: <Widget>[
