@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "913060426753",
+    "firebase_url": "https://mata-kampus.firebaseio.com",
+    "project_id": "mata-kampus",
+    "storage_bucket": "mata-kampus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913060426753:android:70efc9b1162cb216843c00",
+        "android_client_info": {
+          "package_name": "com.example.matakampus2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913060426753-3q4kft6ch434piv17ht8kjhptii0c4hv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.matakampus2",
+            "certificate_hash": "72c4fb91116624c382cda433f9d2a29f1794d541"
+          }
+        },
+        {
+          "client_id": "913060426753-17a22e09j8v7nhpahs51boj29m9g770b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzMVgrN3Lw6Su5Kt2ECUQpQQiFHCNBt8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913060426753-17a22e09j8v7nhpahs51boj29m9g770b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
