@@ -19,10 +19,23 @@ class _BerandaTabState extends State<BerandaTab> {
     return SafeArea(
       child: Scaffold(
         appBar: CustomAppBar(
+          height: 64,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 16),
             child: Row(children: <Widget>[
-              Image.asset('assets/image/logo-trans.png')
+              Image.asset('assets/image/logo-trans.png'),
+              SizedBox(width: 16),
+              Expanded(
+                child: Container(
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.grey
+                    ),
+                    borderRadius: BorderRadius.circular(32)
+                  ),
+                ),
+              )
             ],),
           ),
         ),
@@ -34,9 +47,9 @@ class _BerandaTabState extends State<BerandaTab> {
                 child: ListView(
                   shrinkWrap: false,
                   children: <Widget>[
-                    _buildTemuanToday(),
-                    _buildTemuanNew(),
-                    _buildTemuanOld()
+                    //_buildTemuanToday(),
+                    //_buildTemuanNew(),
+                    //_buildTemuanOld()
                   ],
                 ),
               );
