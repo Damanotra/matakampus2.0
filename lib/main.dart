@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:matakampus2/router.dart';
+import 'package:matakampus2/ui/screen/splashscreen.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'MataKampus',
+      initialRoute: '/',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -20,16 +21,28 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+          primarySwatch: MaterialColor(0xFFFF9717,color),
+          primaryColor: Color(0xFFFF9717)
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      onGenerateRoute: Router.generateRoute,
     );
   }
 }
+
+Map<int, Color> color =
+{
+  50:Color.fromRGBO(100,59,9, .1),
+  100:Color.fromRGBO(100,59,9, .2),
+  200:Color.fromRGBO(100,59,9, .3),
+  300:Color.fromRGBO(100,59,9, .4),
+  400:Color.fromRGBO(100,59,9, .5),
+  500:Color.fromRGBO(100,59,9, .6),
+  600:Color.fromRGBO(100,59,9, .7),
+  700:Color.fromRGBO(100,59,9, .8),
+  800:Color.fromRGBO(100,59,9, .9),
+  900:Color.fromRGBO(100,59,9, 1),
+};
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -102,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.display1,
             ),
           ],
         ),
