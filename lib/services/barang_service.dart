@@ -12,7 +12,7 @@ class BarangService extends ChangeNotifier {
   List<Barang> list_barang;
 
 
-  Future<List<Barang>> fetchBarang() async {
+  Future<List<Barang>> getList() async {
     var result = await _api.getDataCollection();
     list_barang = result.documents
         .map((doc) => Barang.fromMap(doc.data, doc.documentID))
@@ -28,7 +28,6 @@ class BarangService extends ChangeNotifier {
     var doc = await _api.getDocumentById(id);
     return  Barang.fromMap(doc.data, doc.documentID) ;
   }
-
 
   Future removeBarang(String id) async{
     await _api.removeDocument(id) ;
