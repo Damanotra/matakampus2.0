@@ -15,12 +15,17 @@ class Router {
         break;
       case '/login':
         return MaterialPageRoute(
-            builder: (_)=>LoginScreen()
+          builder: (_)=>LoginScreen()
         );
         break;
       case '/home':
         return MaterialPageRoute(
-            builder: (_)=>HomeScreen()
+          builder: (_)=>HomeScreen()
+        );
+        break;
+      case '/barang-ditemukan':
+        return MaterialPageRoute(
+          //builder: (_)=>DitemukanScreen()
         );
         break;
       default:
