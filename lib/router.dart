@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+//import 'package:matakampus2/ui/screen/ditemukan/ditemukan.dart';
 import 'package:matakampus2/ui/screen/homescreen.dart';
 import 'package:matakampus2/ui/screen/login.dart';
 import 'package:matakampus2/ui/screen/splashscreen.dart';
@@ -15,12 +16,17 @@ class Router {
         break;
       case '/login':
         return MaterialPageRoute(
-            builder: (_)=>LoginScreen()
+          builder: (_)=>LoginScreen()
         );
         break;
       case '/home':
         return MaterialPageRoute(
-            builder: (_)=>HomeScreen()
+          builder: (_)=>HomeScreen()
+        );
+        break;
+      case '/barang-ditemukan':
+        return MaterialPageRoute(
+          //builder: (_)=>DitemukanScreen()
         );
         break;
       default:

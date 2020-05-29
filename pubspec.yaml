@@ -31,10 +31,21 @@ dependencies:
   firebase_auth:
   google_sign_in: ^4.5.1
   firebase_ui: ^1.0.8
-  flutter_bloc: ^4.0.0
-  bloc: ^4.0.0
+  bloc: ^0.14.2
+  flutter_bloc: ^0.17.0
   firebase_storage: ^3.1.6
+  cloud_firestore: ^0.13.6
   file_picker: ^1.9.0+1
+  intl: "^0.15.8"
+  pull_to_refresh: ^1.5.3
+  get_it: ^1.0.3+1
+  shared_preferences: ^0.5.3+4
+  loader_search_bar: ^1.0.3+3
+  flutter_dotenv: ^2.0.1
+  http: ^0.12.0+2
+  equatable: ^0.2.5
+  firebase_core: ^0.4.5
+  provider: ^3.0.0+1
 
 dev_dependencies:
   flutter_test:
